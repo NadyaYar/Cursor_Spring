@@ -1,16 +1,10 @@
-package javaConfig;
+package xmlConfig;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
-@Configuration
 public class Calculator {
+    private final xmlConfig.PlusService plusService;
+    private final xmlConfig.MinusService minusService;
 
-    private final PlusService plusService;
-    private final MinusService minusService;
-
-    @Autowired
     public Calculator(PlusService plusService, MinusService minusService) {
         this.plusService = plusService;
         this.minusService = minusService;
